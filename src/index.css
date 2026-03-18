@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Standardize clip-paths for equal skew */
+.clip-bottom-left {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(
+    0 0,        /* top-left */
+    100% 0,     /* top-right */
+    100% 85%,   /* above bottom-right */
+    85% 100%,   /* inward bottom-right cut */
+    0 100%      /* bottom-left */
+  );
+}
+
+.clip-top-right {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(
+    0 0,        /* top-left */
+    85% 0,      /* inward top-right cut */
+    100% 15%,   /* downward diagonal */
+    100% 100%,  /* bottom-right */
+    0 100%      /* bottom-left */
+  );
+}
+
+.cut-bottom-right {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(
+    0 0,        /* top-left */
+    100% 0,     /* top-right */
+    100% 85%,   /* above bottom-right */
+    85% 100%,   /* inward bottom-right cut */
+    0 100%      /* bottom-left */
+  );
+}
+
+.cut-bottom-left {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(
+    0 0,        /* top-left */
+    100% 0,     /* top-right */
+    100% 100%,  /* bottom-right */
+    15% 100%,   /* inward bottom-left cut */
+    0 85%       /* above bottom-left */
+  );
+}
+
+.cut-top-right {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(
+    0 0,        /* top-left */
+    85% 0,      /* inward top-right cut */
+    100% 15%,   /* downward diagonal */
+    100% 100%,  /* bottom-right */
+    0 100%      /* bottom-left */
+  );
+}
+
+.cut-top-left {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(
+    15% 0,      /* inward top-left cut */
+    100% 0,     /* top-right */
+    100% 100%,  /* bottom-right */
+    0 100%,     /* bottom-left */
+    0 15%       /* diagonal up to top-left */
+  );
+}
